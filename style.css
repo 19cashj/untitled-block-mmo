@@ -1,4 +1,53 @@
-#canvas {
-    width: 400px;
-    height: 300px;
+
+body{
+  background-color: #222;
+  margin: 0;
+}
+
+
+/* There is some css hacking needed to display the right size, notice
+for instance that  height and width are half of the HTML definition 
+for retina screens */
+
+#canvas01 {
+  background-color: #111;
+  position: absolute;
+  transform: translate(30%, 10%);
+  width: 1200px;  
+  height: 800px;
+}
+
+.clickareas1 {
+  top: 152px;
+  width: 700px; height: 700px;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  /* The CSS to get the Isometric Effect */
+  transform: rotateX(58deg) rotateZ(45deg) translate(61.2%, -61.5%);
+  position: relative;
+  z-index: 1;
+}
+.clickareas2 {
+  top: 119px;
+  width: 700px; height: 700px;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  /* The CSS to get the Isometric Effect */
+  transform: rotateX(58deg) rotateZ(45deg) translate(60.7%, -61.9%);
+  position: absolute;
+}
+
+.clickarea {
+  /* In order to position the object properly I have to set the position property to relative in order to absolutely position the object later in the CSS */
+  position: relative;
+}
+
+.hoverable:hover {
+  background-color: yellow;
+}
+
+.buildborder {
+  border: yellow 1px dashed;
 }
